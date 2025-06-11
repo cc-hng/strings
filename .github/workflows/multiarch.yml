@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    
+
 env:
   CTEST_OUTPUT_ON_FAILURE: 1
   CPM_SOURCE_CACHE: ${{ github.workspace }}/cpm_modules
@@ -66,8 +66,8 @@ jobs:
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
       # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: ./tests/lcrypt-test  
+      run: ./tests/strings-test
 
     - name: Bench
       working-directory: ${{ steps.strings.outputs.build-output-dir }}
-      run: ./benchmarks/lcrypt-bench  
+      run: ./benchmarks/strings-bench
