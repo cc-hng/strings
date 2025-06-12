@@ -3,7 +3,7 @@
 
 using namespace ss;
 
-TEST(crypto, base64_b) {
+TEST(strings, base64_b) {
     std::string a = "abcdefghijklmnopqrstuvwxyz0123456789";
     for (int i = 0; i < 10; ++i) {
         a += a;
@@ -14,7 +14,7 @@ TEST(crypto, base64_b) {
     }
 }
 
-TEST(crypto, base64) {
+TEST(strings, base64) {
     static const std::string in_1 = "a";
     static const std::string in_2 = "ab";
     static const std::string in_3 = "abc";

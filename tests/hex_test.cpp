@@ -3,7 +3,7 @@
 
 using namespace ss;
 
-TEST(crypto, hex) {
+TEST(strings, hex) {
     static const std::string input_1 = "hello,world";  // not simd
     static const std::string input_2 = "abcdefghijklmnopqrstuvwxyz0123456789ABCDE"
                                        "FGHIJKLMNOPQRSTUVWXYZ0123456789";  // simd

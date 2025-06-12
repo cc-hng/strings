@@ -18,7 +18,7 @@ inline auto tuple_pop_back(const std::tuple<Ts...>& t) {
     return slice_tuple_impl(std::make_index_sequence<N - 1>{}, t);
 }
 
-TEST(crypto, string) {
+TEST(strings, string) {
     std::string s1  = "abcABC123.-+/";
     std::string s10 = "12345678901234567890123456789012abcABC123.-+/";
     std::string s11 = "12345678abcABC234567890123456789012abcABC123.-+/xyz";
@@ -49,7 +49,7 @@ TEST(crypto, string) {
     EXPECT_TRUE(str_ends_with("abc.txt", ".txt"));
 }
 
-TEST(crypto, pack) {
+TEST(strings, pack) {
     EXPECT_EQ(hex_encode(str_pack("i2", 1)), "0100");
 
     EXPECT_EQ(tuple_pop_back(str_unpack<uint8_t>("B", str_pack("B", 0xff))),
